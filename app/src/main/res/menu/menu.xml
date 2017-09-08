@@ -3,6 +3,9 @@
     <item android:id="@+id/new_game"
         android:title="@string/new_game" />
 
+    <item android:id="@+id/who_goes_first"
+        android:title="Who Goes First?"/>
+
     <item android:id="@+id/master_control"
         android:title="@string/master_control"/>
 

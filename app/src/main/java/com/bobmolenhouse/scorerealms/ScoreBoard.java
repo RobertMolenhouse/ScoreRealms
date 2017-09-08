@@ -15,6 +15,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.util.Random;
+
 public class ScoreBoard extends AppCompatActivity {
     private TextView player1ScoreView;
     private TextView player2ScoreView;
@@ -97,6 +99,16 @@ public class ScoreBoard extends AppCompatActivity {
                 player2Score = 50;
                 player1ScoreView.setText("" + player1Score);
                 player2ScoreView.setText("" + player2Score);
+                return true;
+
+            case R.id.who_goes_first:
+                Random r = new Random();
+                timer.start();
+                if(r.nextInt(10) > 4){
+                    player1ScoreChange.setText("I go first!");
+                }else{
+                    player2ScoreChange.setText("I go first!");
+                }
                 return true;
 
             case R.id.master_control:
